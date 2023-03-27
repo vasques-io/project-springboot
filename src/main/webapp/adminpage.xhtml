@@ -77,13 +77,10 @@
 
 	</h:form>
 	
-	<p:dialog header="Meu Modal" widgetVar="nomeModal" modal="true" onShow="PF('nomeModal').show()">
+	<p:dialog header="Editar Usuário" widgetVar="nomeModal" modal="true" onShow="PF('nomeModal').show()">
 	
 		<h:form id="meuForm">
 		    <p:panelGrid columns="2">
-		      
-		      <p:outputLabel for="id" value="Id: " />
-		      <p:inputText id="id" value="#{usuarioController.usuario.id}"/>
 		    
 		      <p:outputLabel for="nome" value="Nome:" />
 		      <p:inputText id="nome" value="#{usuarioController.usuario.nome}"/>
