@@ -13,12 +13,14 @@ import javax.persistence.PersistenceContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
+import org.springframework.web.context.annotation.SessionScope;
+
 import br.com.digiboard.app.model.Usuario;
 
 import br.com.digiboard.app.repository.UsuarioRepository;
 
 @Component
-@RequestScope
+@SessionScope
 public class UsuarioController {
 	
 	@Autowired
