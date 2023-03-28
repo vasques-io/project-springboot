@@ -23,8 +23,8 @@
 			
 			<f:facet name="right">
 			
-			<p:inputText />
-			<p:commandButton type="button"  icon="pi pi-search" style="margin-left: 14px"/>
+			<p:inputText value="#{usuarioController.searchText}" placeholder="Procurar..." />
+			<p:commandButton action="#{usuarioController.procurar}" update="usuarios-table" icon="pi pi-search" style="margin-left: 14px"/>
 			
 			</f:facet>
 		
