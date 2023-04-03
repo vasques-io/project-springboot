@@ -5,7 +5,8 @@
 	  xmlns:p="http://primefaces.org/ui">
 <h:head>
 <meta charset="UTF-8"/>
-<title>Insert title here</title>
+<title>Inicio</title>
+<h:outputStylesheet name="main.css" />
 </h:head>
 <h:body>
 
@@ -37,16 +38,19 @@
 			</f:facet>
 			
 			<p:column headerText="Nome" style="border: 1px solid #ccc">
-				<h:outputText value="#{usuario.nome}"/>
-			</p:column>
-			
-			<p:column headerText="Endereço" style="border: 1px solid #ccc">
-				<h:outputText value="#{usuario.endereco}"/>
-			</p:column>
-			
-			<p:column headerText="Data de nascimento" style="border: 1px solid #ccc">
-				<h:outputText value="#{usuario.data}"/>
-			</p:column>
+	            <div class="nome-usuario">
+	                <p:graphicImage value="#{usuario.urlImagem}" styleClass="img-arredondada" />
+	                <h:outputText value="#{usuario.nome}" />
+	            </div>
+	        </p:column>
+	        
+	        <p:column headerText="Endereço" style="border: 1px solid #ccc">
+	            <h:outputText value="#{usuario.endereco}" />
+	        </p:column>
+	        
+	        <p:column headerText="Data de nascimento" style="border: 1px solid #ccc">
+	            <h:outputText value="#{usuario.data}" />
+	        </p:column>
 		
 		</p:dataTable>
 	
