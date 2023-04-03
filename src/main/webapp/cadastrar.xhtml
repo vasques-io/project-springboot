@@ -27,7 +27,7 @@
 	
 	<p:spacer height="10"/>
 
-	<h:form>
+	<h:form enctype="multipart/form-data">
 		
 		<p:panel header="Cadastrar Usuário">
             <p:messages/>
@@ -41,6 +41,7 @@
 
                <h:outputLabel for="dataNascimento" value="Data de Nascimento:"/>
                <p:calendar id="dataNascimento" value="#{usuarioController.usuario.data}" required="true"/>
+               <p:fileUpload listener="#{usuarioController.handleFileUpload}" mode="advanced" fileLimit="1" auto="true" />
             </h:panelGrid>
 
             <p:commandButton value="Salvar" action="#{usuarioController.salvar}" ajax="false"/>
