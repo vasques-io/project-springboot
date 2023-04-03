@@ -2,12 +2,8 @@ package br.com.digiboard.app.controller;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.io.FileOutputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -16,7 +12,6 @@ import javax.faces.view.ViewScoped;
 
 import org.primefaces.event.FileUploadEvent;
 import org.primefaces.model.file.UploadedFile;
-import org.primefaces.shaded.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
