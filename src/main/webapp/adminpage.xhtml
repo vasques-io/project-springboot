@@ -5,11 +5,10 @@
 	  xmlns:p="http://primefaces.org/ui">
 <h:head>
 <meta charset="UTF-8"/>
-<title>Insert title here</title>
+<title>Administração</title>
+<h:outputStylesheet name="main.css" />
 </h:head>
 <h:body>
-
-
 
 	<h:form id="frmUsuario">
 	
@@ -37,38 +36,29 @@
 			<f:facet name="header">
 				<h2>Tabela de usuários</h2>
 			</f:facet>
-		
+			
 			<p:column headerText="Nome" style="border: 1px solid #ccc">
+	            <div class="nome-usuario">
+	                <p:graphicImage value="#{usuario.urlImagem}" styleClass="img-arredondada" />
+	                <h:outputText value="#{usuario.nome}" />
+	            </div>
+	        </p:column>
+	        
+	        <p:column headerText="Endereço" style="border: 1px solid #ccc">
+	            <h:outputText value="#{usuario.endereco}" />
+	        </p:column>
+	        
+	        <p:column headerText="Data de nascimento" style="border: 1px solid #ccc">
+	            <h:outputText value="#{usuario.data}" />
+	        </p:column>
 			
-				<h:outputText value="#{usuario.nome}"/>
-				
+			<p:column styleClass="coluna-botao" style="border: 1px solid #ccc">
+				<p:commandButton action="#{usuarioController.editar(usuario)}" update="meuForm" onclick="PF('nomeModal').show(); event.preventDefault();" icon="pi pi-pencil"/>
 			</p:column>
 			
-			<p:column headerText="Endereço" style="border: 1px solid #ccc">
-			
-				<h:outputText value="#{usuario.endereco}"/>
-				
+			<p:column styleClass="coluna-botao" style="border: 1px solid #ccc">
+				<p:commandButton action="#{usuarioController.excluir(usuario)}" update="usuarios-table" icon="pi pi-trash" styleClass="red-btn"/>
 			</p:column>
-			
-			<p:column headerText="Data de nascimento" style="border: 1px solid #ccc">
-			
-				<h:outputText value="#{usuario.data}"/>
-				
-			</p:column>
-			
-			<p:column style="width: 2.5%; border:1px solid #ccc">
-			
-				<p:commandButton icon="pi pi-pencil" update="meuForm" onclick="PF('nomeModal').show(); event.preventDefault();" action="#{usuarioController.editar(usuario)}"/>
-			
-			</p:column>
-			
-			<p:column style="width: 2.5%; border:1px solid #ccc">
-			
-				<p:commandButton action="#{usuarioController.excluir(usuario)}" update="usuarios-table" icon="pi pi-trash" style="background-color: red; border-color: red;"/>
-			
-			</p:column>
-			
-			
 		
 		</p:dataTable>
 		
@@ -95,8 +85,6 @@
 		    </p:panelGrid>
 		  </h:form>
 	</p:dialog>
-
-	
             
 </h:body>
 </html>
