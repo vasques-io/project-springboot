@@ -1,0 +1,30 @@
+.nome-usuario{
+	display: flex;
+	align-items: center;		
+}
+
+.coluna-botao{
+	width: 2.5%;
+}
+
+.coluna-botao .red-btn{
+	background-color: red;
+	border-color: red;
+}
+
+.coluna-botao .red-btn:hover{
+	background-color: red;
+	border-color: red;
+}
+
+.img-arredondada {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+}
+
+.nome-usuario {
+    overflow: hidden;
+}
