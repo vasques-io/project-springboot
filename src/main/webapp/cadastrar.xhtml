@@ -40,7 +40,8 @@
                <p:inputText id="endereco" value="#{usuarioController.usuario.endereco}" required="true"/>
 
                <h:outputLabel for="dataNascimento" value="Data de Nascimento:"/>
-               <p:calendar id="dataNascimento" value="#{usuarioController.usuario.data}" required="true"/>
+               <p:calendar id="dataNascimento" value="#{usuarioController.usuario.data}" navigator="true" pattern="yyyy-MM-dd" 
+               yearRange="1930:2023" minDate="01/01/1930" maxDate="31/12/2023"/>
                <p:fileUpload listener="#{usuarioController.handleFileUpload}" mode="advanced" fileLimit="1" auto="true" />
             </h:panelGrid>
 
