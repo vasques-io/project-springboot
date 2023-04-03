@@ -14,17 +14,18 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	private String urlImagem = "/img/default-user-icon.jpg";
+	
 	private String nome;
 	
 	private String endereco;
 	
 	private Date data;
-	
-	
 
-	public Usuario(Long id, String nome, String endereco, Date data) {
+	public Usuario(Long id, String urlImagem, String nome, String endereco, Date data) {
 		super();
 		this.id = id;
+		this.urlImagem = urlImagem;
 		this.nome = nome;
 		this.endereco = endereco;
 		this.data = data;
@@ -40,6 +41,14 @@ public class Usuario {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+		
+	public String getUrlImagem() {
+		return urlImagem;
+	}
+
+	public void setUrlImagem(String urlImagem) {
+		this.urlImagem = urlImagem;
 	}
 
 	public String getNome() {
